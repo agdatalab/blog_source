@@ -1,46 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>빅데이터 on AgData Lab</title>
-    <link>/tags/%EB%B9%85%EB%8D%B0%EC%9D%B4%ED%84%B0/</link>
-    <description>Recent content in 빅데이터 on AgData Lab</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 24 Apr 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/%EB%B9%85%EB%8D%B0%EC%9D%B4%ED%84%B0/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>스마트팜 데이터의 이해 (3/3)</title>
-      <link>/post/smartfarm_data3/</link>
-      <pubDate>Tue, 24 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/smartfarm_data3/</guid>
-      <description>PREV : 스마트팜(ICT 기반 원예온실) 데이터의 이해 (2/3)스마트팜 데이터 활용 : 환경요인의 적정 범위 관리앞선 두번째 Post에서 스마트팜 데이터의 요약에 대해서 살펴보았다면 세번째 Post에서는 실제 현장에서 스마트팜을 운영을 할 때는 스마트팜 데이터가 어떻게 활용될 수 있는지를 살펴보자.
-아래 그림의 X축은 0 ~ 24시까지를 나타내는 시간축, Y축은 15 ~ 30도 사이의 온실 실내온도 나타내는 도면이다. 반투명 빨간색 띠는 시간대별로 관리되어야 하는 온실 실내온도의 적정 범위를 표현한 것이다. 적정범위의 기준은 농촌진흥청 자료집과 구글링으로 조사된 기준 온도에서 상하한에 여유범위를 고려하여 정하였다.</description>
-    </item>
-    
-    <item>
-      <title>스마트팜 데이터의 이해 (2/2)</title>
-      <link>/post/smartfarm_data2/</link>
-      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/smartfarm_data2/</guid>
-      <description>PREV : 스마트팜(ICT 기반 원예온실) 데이터의 이해 (1/3)스마트팜 데이터 요약 : 분단위 측정치와 시간단위 평균치지난 Post에서 분단위 데이터 dat을 시간단위 데이터로 요약하여 새로운 데이터 dat_hour를 만들었을 때의 저장용량과 다운로드 속도 측면에서의 이점을 설명하였다. 이점이 있다면 그에 반하는 역효과도 분명 발생하게 되는데 1/60배로 데이터를 축약했다면 그만큼의 정보손실이 발생한다.
-온실 내부평균온도에 대한 분단위 데이터와 시간단위 데이터의 그래프를 비교해보면 그 영향을 눈으로 확인할 수 있다. X축은 0시~24시까지의 시간, Y축은 내부평균온도(EVTP)로 설정하였다.</description>
-    </item>
-    
-    <item>
-      <title>스마트팜 데이터의 이해 (1/3)</title>
-      <link>/post/smartfarm_data/</link>
-      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/smartfarm_data/</guid>
-      <description>Thumbnail 이미지 출처
-스마트팜이란?농림수산식품교육문화정보원(EPIS, 이하 농정원)이 운영하는 SmartFarm Korea 에서 정의하는 스마트팜의 개념을 보면 스마트 온실, 스마트 과수원, 스마트 축사를 통틀어 스마트팜이라고 지칭하고 있다. 과거에 프리바 유리온실 모델과 같은 ICT 기반의 원예온실로 불리던 개념이 축산과 과수 농장까지 확대되면서 스마트팜이 개념으로 발전하였다.
-스마트팜의 구성요소는 크게 현장의 환경정보와 영상정보를 수집하는 수집부, 수집된 데이터를 저장하고 필요한 형태로 가공/분석하는 저장부, 가공/분석된 정보를 이용하여 온실 관리에 필요한 정보를 표출하고 장비를 제어하는 활용부로 나눌 수 있다.</description>
-    </item>
-    
-  </channel>
-</rss>

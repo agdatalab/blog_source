@@ -1,24 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Glm on AgData Lab</title>
-    <link>/tags/glm/</link>
-    <description>Recent content in Glm on AgData Lab</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 25 Apr 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/glm/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>GLM을 이용한 대학학업 성취도 분석 (랩스터디)</title>
-      <link>/post/glm_ach/</link>
-      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/glm_ach/</guid>
-      <description> GLM을 이용한 대학학업성취도 분석  from agdatalab코멘트엄진용 : 나불나불</description>
-    </item>
-    
-  </channel>
-</rss>

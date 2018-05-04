@@ -1,4 +1,0 @@
-
-
-<iframe width="450" height="400" scrolling="no" frameborder="no"  src="https://brettory.shinyapps.io/gender_tech_country/"> </iframe>
-

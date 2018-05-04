@@ -1,24 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>랩세미나 on AgData Lab</title>
-    <link>/categories/%EB%9E%A9%EC%84%B8%EB%AF%B8%EB%82%98/</link>
-    <description>Recent content in 랩세미나 on AgData Lab</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 24 Apr 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/%EB%9E%A9%EC%84%B8%EB%AF%B8%EB%82%98/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Deep Learning &amp; Convolutional Neural Network (랩세미나)</title>
-      <link>/post/dl_cnn/</link>
-      <pubDate>Tue, 24 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/dl_cnn/</guid>
-      <description> Deep Learning &amp;amp; Convolutional Neural Network  from agdatalab</description>
-    </item>
-    
-  </channel>
-</rss>

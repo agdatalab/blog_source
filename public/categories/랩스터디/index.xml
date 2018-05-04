@@ -1,33 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>랩스터디 on AgData Lab</title>
-    <link>/categories/%EB%9E%A9%EC%8A%A4%ED%84%B0%EB%94%94/</link>
-    <description>Recent content in 랩스터디 on AgData Lab</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 04 May 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/%EB%9E%A9%EC%8A%A4%ED%84%B0%EB%94%94/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>원산지정보와 국제광고(랩스터디)</title>
-      <link>/post/orgin_intnl_ad/</link>
-      <pubDate>Fri, 04 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/orgin_intnl_ad/</guid>
-      <description>원산지정보의 강조와 소비자의 자민족중심주의 성향이 국제광고 효과에 미치는 영향  from Sungjay Kim코멘트진용’s comment주제 : 원산지정보의 강조와 소비자의 자민족중심주의 성향이 국제광고 효과에 미치는 영향 내용 : 본 논문은 원산지 정보의 강조와 자민족중심주의가 국제광고에 대한 소비자 반응에 미치는 영향을 원산지 이미지, 제품유형, 제품 관여도의 조절효과를 중심으로 살펴봄으로써 국제광고에서 원산지 효과가 발생하는 구조를 분석하고 있다. 논문을 읽으며 흥미로웠던 점은 세미나에서 기존에 많이 읽었던 논문들과 달리, 기존의 데이터를 이용하지 않고 새로 실험을 설계하여 데이터를 얻었다는 점이다.</description>
-    </item>
-    
-    <item>
-      <title>GLM을 이용한 대학학업 성취도 분석 (랩스터디)</title>
-      <link>/post/glm_ach/</link>
-      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/glm_ach/</guid>
-      <description> GLM을 이용한 대학학업성취도 분석  from agdatalab코멘트엄진용 : 나불나불</description>
-    </item>
-    
-  </channel>
-</rss>

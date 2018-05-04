@@ -1,24 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>기타발표자료 on AgData Lab</title>
-    <link>/categories/%EA%B8%B0%ED%83%80%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/</link>
-    <description>Recent content in 기타발표자료 on AgData Lab</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 26 Apr 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/%EA%B8%B0%ED%83%80%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>농식품 분야 ICT 융합 해외 최신 기술 동향 (2014.5.15)</title>
-      <link>/post/ict_convergence_tech_ppt/</link>
-      <pubDate>Thu, 26 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/ict_convergence_tech_ppt/</guid>
-      <description> 농식품 분야 ICT 융합 해외 최신 기술 동향 (2014.5.15)  from agdatalab</description>
-    </item>
-    
-  </channel>
-</rss>

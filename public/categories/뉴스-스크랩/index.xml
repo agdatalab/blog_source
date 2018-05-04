@@ -1,37 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>뉴스 스크랩 on AgData Lab</title>
-    <link>/categories/%EB%89%B4%EC%8A%A4-%EC%8A%A4%ED%81%AC%EB%9E%A9/</link>
-    <description>Recent content in 뉴스 스크랩 on AgData Lab</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 21 Apr 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/%EB%89%B4%EC%8A%A4-%EC%8A%A4%ED%81%AC%EB%9E%A9/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>후지쯔와 큐슈대학, 농업생산을 위한 AI 공동연구</title>
-      <link>/post/new_fujitsu_ai/</link>
-      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/new_fujitsu_ai/</guid>
-      <description>Thumbnail 이미지 출처
-기사 원문
-2018년 4월 12일 규슈대학과 후지쯔(Fujitsu Limited)는 2018 년 4월부터 2년간 인공지능으로 농산물의 안정성과 정교함을 높이기 위해 농업분야 공동연구를 발표했다.
-이번 공동 연구에서 후지쯔와 규슈대학은 큐슈대학의 phytometric 기술을 사용하여 측정한 식물의 높이와 잎 표면적을 포함한 식물 성장 상태 데이터와의 시공간 변화 데이터를 통합한 독점적인 식물성장 모델을 취할 예정이다. 식물 이론을 개발하고 후지쯔가 개발한 AI 엔진과 통합하여 성장률 및 수확기간 등의 정보를 실시간으로 예측할 수 있다. 두 기관은 또한 이러한 예측을 토대로 현장에서 식물 성장을 규제함으로써 효율적인 식물 재배를 수요에 맞게 할 수 있는 시스템에 대한 연구 개발을 수행한다.</description>
-    </item>
-    
-    <item>
-      <title>농업 분야 뉴스 스크랩</title>
-      <link>/news_scrap/</link>
-      <pubDate>Fri, 13 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/news_scrap/</guid>
-      <description>농업 현장 소식, 기술동향, 스타트업, 비즈니스 관련 뉴스를 모아봅시다.PC의 파일을 불러와봅시다.
-dat &amp;lt;- read.csv(&amp;#39;cluster.csv&amp;#39;)names(dat)## [1] &amp;quot;code&amp;quot; &amp;quot;ratio_eco_total&amp;quot; &amp;quot;ratio_orgashop&amp;quot; ## [4] &amp;quot;ratio_mart&amp;quot; &amp;quot;orgashop_mart&amp;quot; &amp;quot;orgashop&amp;quot; ## [7] &amp;quot;mart_wo_orga&amp;quot; &amp;quot;mart_orga&amp;quot; &amp;quot;orga_total&amp;quot; ## [10] &amp;quot;eco_wo_orga&amp;quot; &amp;quot;exp_total&amp;quot; &amp;quot;sel1&amp;quot; ## [13] &amp;quot;sel2&amp;quot; &amp;quot;sel3&amp;quot; &amp;quot;sel4&amp;quot; ## [16] &amp;quot;sel5&amp;quot; &amp;quot;sel6&amp;quot; &amp;quot;heal1&amp;quot; ## [19] &amp;quot;heal2&amp;quot; &amp;quot;heal3&amp;quot; &amp;quot;heal4&amp;quot; ## [22] &amp;quot;heal5&amp;quot; &amp;quot;sec1&amp;quot; &amp;quot;sec2&amp;quot; ## [25] &amp;quot;sec3&amp;quot; &amp;quot;sec4&amp;quot; &amp;quot;fre1&amp;quot; ## [28] &amp;quot;fre2&amp;quot; &amp;quot;fre3&amp;quot; &amp;quot;econ1&amp;quot; ## [31] &amp;quot;econ2&amp;quot; &amp;quot;econ3&amp;quot; &amp;quot;econ4&amp;quot; ## [34] &amp;quot;tast1&amp;quot; &amp;quot;tast2&amp;quot; &amp;quot;tast3&amp;quot; ## [37] &amp;quot;plea1&amp;quot; &amp;quot;plea2&amp;quot; &amp;quot;plea3&amp;quot; ## [40] &amp;quot;habi1&amp;quot; &amp;quot;habi2&amp;quot; &amp;quot;habi3&amp;quot; ## [43] &amp;quot;atti1&amp;quot; &amp;quot;atti2&amp;quot; &amp;quot;atti3&amp;quot; ## [46] &amp;quot;atti4&amp;quot; &amp;quot;atti5&amp;quot; &amp;quot;atti6&amp;quot; ## [49] &amp;quot;heal&amp;quot; &amp;quot;econ&amp;quot; &amp;quot;habit&amp;quot; ## [52] &amp;quot;info&amp;quot; &amp;quot;local&amp;quot; &amp;quot;new&amp;quot; ## [55] &amp;quot;no_add&amp;quot; &amp;quot;plea&amp;quot; &amp;quot;sec&amp;quot; ## [58] &amp;quot;taste&amp;quot; &amp;quot;ratio_orga_total&amp;quot; &amp;quot;ratio_orga_shop&amp;quot; ## [61] &amp;quot;ratio_mart_eco&amp;quot; &amp;quot;X_clus_1&amp;quot; &amp;quot;X_clus_2&amp;quot; ## [64] &amp;quot;X_clus_3&amp;quot; &amp;quot;X_clus_4&amp;quot; &amp;quot;X_clus_5&amp;quot; ## [67] &amp;quot;X_clus_6&amp;quot; &amp;quot;X_clus_7&amp;quot; &amp;quot;X_clus_8&amp;quot; ## [70] &amp;quot;X_clus_9&amp;quot; &amp;quot;X_clus_10&amp;quot; &amp;quot;X_clus_11&amp;quot; ## [73] &amp;quot;X_clus_12&amp;quot; &amp;quot;X_clus_13&amp;quot; &amp;quot;X_clus_14&amp;quot; ## [76] &amp;quot;X_clus_15&amp;quot; &amp;quot;X_clus_16&amp;quot; &amp;quot;X_clus_17&amp;quot; ## [79] &amp;quot;X_clus_18&amp;quot; &amp;quot;X_clus_19&amp;quot; &amp;quot;X_clus_20&amp;quot; ## [82] &amp;quot;X_clus_21&amp;quot; &amp;quot;X_clus_22&amp;quot; &amp;quot;X_clus_23&amp;quot; ## [85] &amp;quot;X_clus_24&amp;quot; &amp;quot;X_clus_25&amp;quot; &amp;quot;X_clus_26&amp;quot; ## [88] &amp;quot;X_clus_27&amp;quot; &amp;quot;X_clus_28&amp;quot; &amp;quot;X_clus_29&amp;quot; ## [91] &amp;quot;X_clus_30&amp;quot;DB에 있는 파일을 불러와 봅시다.</description>
-    </item>
-    
-  </channel>
-</rss>

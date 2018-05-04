@@ -1,167 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>AgData Lab</title>
-    <link>/</link>
-    <description>Recent content on AgData Lab</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 04 May 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>원산지정보와 국제광고(랩스터디)</title>
-      <link>/post/orgin_intnl_ad/</link>
-      <pubDate>Fri, 04 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/orgin_intnl_ad/</guid>
-      <description>원산지정보의 강조와 소비자의 자민족중심주의 성향이 국제광고 효과에 미치는 영향  from Sungjay Kim코멘트진용’s comment주제 : 원산지정보의 강조와 소비자의 자민족중심주의 성향이 국제광고 효과에 미치는 영향 내용 : 본 논문은 원산지 정보의 강조와 자민족중심주의가 국제광고에 대한 소비자 반응에 미치는 영향을 원산지 이미지, 제품유형, 제품 관여도의 조절효과를 중심으로 살펴봄으로써 국제광고에서 원산지 효과가 발생하는 구조를 분석하고 있다. 논문을 읽으며 흥미로웠던 점은 세미나에서 기존에 많이 읽었던 논문들과 달리, 기존의 데이터를 이용하지 않고 새로 실험을 설계하여 데이터를 얻었다는 점이다.</description>
-    </item>
-    
-    <item>
-      <title>농식품 분야 ICT 융합 해외 최신 기술 동향 (2014.5.15)</title>
-      <link>/post/ict_convergence_tech_ppt/</link>
-      <pubDate>Thu, 26 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/ict_convergence_tech_ppt/</guid>
-      <description> 농식품 분야 ICT 융합 해외 최신 기술 동향 (2014.5.15)  from agdatalab</description>
-    </item>
-    
-    <item>
-      <title>주제별 카테고리</title>
-      <link>/topic_categories/</link>
-      <pubDate>Thu, 26 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/topic_categories/</guid>
-      <description>농업 통계생산과 유통전국의 농축산물 생산량은 통계청 데이터에서 확인이 가능하다. 유통과 관련한 데이터는 한국농수산식품유통공사에서 운영하는 KAMIS 에서 제공되고 있다.
-농축산물 생산생산의 축은 농협이다.
-농축산물 유통유통의 꽃은 도매시장이다.
-전국도매시장 정보 - 가락도매시장 - 구리도매시장
-환경모니터링과 제어환경모니터링작물의 생육에 가장 많은 영향을 미치는 요소 중 하나는 기상 환경이다. 외부 기상 환경 정보를 정확히 알 수 있어야 최적 생육 조건에 맞도록 환경 요소를 제어할 수 있다.</description>
-    </item>
-    
-    <item>
-      <title>GLM을 이용한 대학학업 성취도 분석 (랩스터디)</title>
-      <link>/post/glm_ach/</link>
-      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/glm_ach/</guid>
-      <description> GLM을 이용한 대학학업성취도 분석  from agdatalab코멘트엄진용 : 나불나불</description>
-    </item>
-    
-    <item>
-      <title>온실환경 관리대상과 에너지 절감 요소</title>
-      <link>/post/env_cont_energy_reduce/</link>
-      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/env_cont_energy_reduce/</guid>
-      <description>도입네덜란드 Priva社는 오랜 연구개발로 축적된 기술과 노하우로 유리온실 기술에서 세계적으로 가장 앞서가고 있고 국내에도 선도 농가 중심으로 일부 도입이 되어 활용되고 있다. 그러나 대규모 유리온실 단지를 조성하기 어려운 우리나라의 농업 현실에서는 투자대비 수익성이 높지 않아 유럽형 유리온실의 확산은 원활하지 않다. 최근 농업현장에서 한국형 스마트팜이 확산되면서 ICT 기반의 연동형 비닐온실이 확산되고 있고, 센서 데이터를 이용한 온실환경 자동제어 기술의 중요성이 높아지고 있으나 아직까지는 기술 개발 초기 단계로 상용화 단계까지는 이르지 못하고 있다.</description>
-    </item>
-    
-    <item>
-      <title>Deep Learning &amp; Convolutional Neural Network (랩세미나)</title>
-      <link>/post/dl_cnn/</link>
-      <pubDate>Tue, 24 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/dl_cnn/</guid>
-      <description> Deep Learning &amp;amp; Convolutional Neural Network  from agdatalab</description>
-    </item>
-    
-    <item>
-      <title>스마트팜 데이터의 이해 (3/3)</title>
-      <link>/post/smartfarm_data3/</link>
-      <pubDate>Tue, 24 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/smartfarm_data3/</guid>
-      <description>PREV : 스마트팜(ICT 기반 원예온실) 데이터의 이해 (2/3)스마트팜 데이터 활용 : 환경요인의 적정 범위 관리앞선 두번째 Post에서 스마트팜 데이터의 요약에 대해서 살펴보았다면 세번째 Post에서는 실제 현장에서 스마트팜을 운영을 할 때는 스마트팜 데이터가 어떻게 활용될 수 있는지를 살펴보자.
-아래 그림의 X축은 0 ~ 24시까지를 나타내는 시간축, Y축은 15 ~ 30도 사이의 온실 실내온도 나타내는 도면이다. 반투명 빨간색 띠는 시간대별로 관리되어야 하는 온실 실내온도의 적정 범위를 표현한 것이다. 적정범위의 기준은 농촌진흥청 자료집과 구글링으로 조사된 기준 온도에서 상하한에 여유범위를 고려하여 정하였다.</description>
-    </item>
-    
-    <item>
-      <title>연구실 학술 활동</title>
-      <link>/lab_activity/</link>
-      <pubDate>Tue, 24 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/lab_activity/</guid>
-      <description>우측 랩세미나/랩스터디/기타발표자료 카테고리를 선택하면 최신 순으로 각각의 활동별 학술활동 자료를 확인할 수 있습니다.
-랩 세미나 발표 자료 모음2018.03.23 랩세미나Deep learning &amp;amp; Convolutional Neural Network Post랩 스터디 발표 자료 모음2018.03.21 랩스터디A comparison of convenience food consumption among different income levels in South Korea Post2018.03.28 랩스터디양돈농가의 경영정보시스템 수용과 관련변인 Post2018.04.04 랩스터디Analysis of Multi-Climate Controller in Tomato Greenhouses Post2018.</description>
-    </item>
-    
-    <item>
-      <title>후지쯔와 큐슈대학, 농업생산을 위한 AI 공동연구</title>
-      <link>/post/new_fujitsu_ai/</link>
-      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/new_fujitsu_ai/</guid>
-      <description>Thumbnail 이미지 출처
-기사 원문
-2018년 4월 12일 규슈대학과 후지쯔(Fujitsu Limited)는 2018 년 4월부터 2년간 인공지능으로 농산물의 안정성과 정교함을 높이기 위해 농업분야 공동연구를 발표했다.
-이번 공동 연구에서 후지쯔와 규슈대학은 큐슈대학의 phytometric 기술을 사용하여 측정한 식물의 높이와 잎 표면적을 포함한 식물 성장 상태 데이터와의 시공간 변화 데이터를 통합한 독점적인 식물성장 모델을 취할 예정이다. 식물 이론을 개발하고 후지쯔가 개발한 AI 엔진과 통합하여 성장률 및 수확기간 등의 정보를 실시간으로 예측할 수 있다. 두 기관은 또한 이러한 예측을 토대로 현장에서 식물 성장을 규제함으로써 효율적인 식물 재배를 수요에 맞게 할 수 있는 시스템에 대한 연구 개발을 수행한다.</description>
-    </item>
-    
-    <item>
-      <title>스마트팜 데이터의 이해 (2/2)</title>
-      <link>/post/smartfarm_data2/</link>
-      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/smartfarm_data2/</guid>
-      <description>PREV : 스마트팜(ICT 기반 원예온실) 데이터의 이해 (1/3)스마트팜 데이터 요약 : 분단위 측정치와 시간단위 평균치지난 Post에서 분단위 데이터 dat을 시간단위 데이터로 요약하여 새로운 데이터 dat_hour를 만들었을 때의 저장용량과 다운로드 속도 측면에서의 이점을 설명하였다. 이점이 있다면 그에 반하는 역효과도 분명 발생하게 되는데 1/60배로 데이터를 축약했다면 그만큼의 정보손실이 발생한다.
-온실 내부평균온도에 대한 분단위 데이터와 시간단위 데이터의 그래프를 비교해보면 그 영향을 눈으로 확인할 수 있다. X축은 0시~24시까지의 시간, Y축은 내부평균온도(EVTP)로 설정하였다.</description>
-    </item>
-    
-    <item>
-      <title>스마트팜 데이터의 이해 (1/3)</title>
-      <link>/post/smartfarm_data/</link>
-      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/smartfarm_data/</guid>
-      <description>Thumbnail 이미지 출처
-스마트팜이란?농림수산식품교육문화정보원(EPIS, 이하 농정원)이 운영하는 SmartFarm Korea 에서 정의하는 스마트팜의 개념을 보면 스마트 온실, 스마트 과수원, 스마트 축사를 통틀어 스마트팜이라고 지칭하고 있다. 과거에 프리바 유리온실 모델과 같은 ICT 기반의 원예온실로 불리던 개념이 축산과 과수 농장까지 확대되면서 스마트팜이 개념으로 발전하였다.
-스마트팜의 구성요소는 크게 현장의 환경정보와 영상정보를 수집하는 수집부, 수집된 데이터를 저장하고 필요한 형태로 가공/분석하는 저장부, 가공/분석된 정보를 이용하여 온실 관리에 필요한 정보를 표출하고 장비를 제어하는 활용부로 나눌 수 있다.</description>
-    </item>
-    
-    <item>
-      <title>About AgData Lab</title>
-      <link>/about/</link>
-      <pubDate>Sat, 14 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Connect Everything in AgricultureAgData Lab은 서울대학교 농업정보시스템 연구실에서 운영하는 농업 빅데이터 연구 블로그이다.
-농업정보시스템 연구실의 주요 연구분야는 다음과 같다:
-농식품 빅데이터, 인공지능 알고리즘농식품 소비트렌드ICT 융합시스템 활용농식품 전자상거래최영찬 교수서울대학교 농경제사회학부 대학원 연구실인 농업정보시스템 연구실을 만든 최영찬 교수는 1990년대 말부터 농업 정보화에 관한 연구를 시작하였고 농업현장에서의 정보화 실현을 위해 2000년에 벤처기업인 ㈜이지팜을 설립하였다. 이지팜이 매출 100억 매출의 농업 ICT 분야 대표 중소기업으로 자리잡게한 이후에는 전문경영인에게 위임하고 대학에서 빅데이터, 인공지능 관련 방법론 강의로 후학 양성에 힘쓰고 있다.</description>
-    </item>
-    
-    <item>
-      <title>농업 및 데이터과학 관련 논문 리뷰</title>
-      <link>/paper_review/</link>
-      <pubDate>Fri, 13 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/paper_review/</guid>
-      <description>농업과 데이터 과학 관련 논문을 리뷰해보아요</description>
-    </item>
-    
-    <item>
-      <title>농업 분야 뉴스 스크랩</title>
-      <link>/news_scrap/</link>
-      <pubDate>Fri, 13 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/news_scrap/</guid>
-      <description>농업 현장 소식, 기술동향, 스타트업, 비즈니스 관련 뉴스를 모아봅시다.PC의 파일을 불러와봅시다.
-dat &amp;lt;- read.csv(&amp;#39;cluster.csv&amp;#39;)names(dat)## [1] &amp;quot;code&amp;quot; &amp;quot;ratio_eco_total&amp;quot; &amp;quot;ratio_orgashop&amp;quot; ## [4] &amp;quot;ratio_mart&amp;quot; &amp;quot;orgashop_mart&amp;quot; &amp;quot;orgashop&amp;quot; ## [7] &amp;quot;mart_wo_orga&amp;quot; &amp;quot;mart_orga&amp;quot; &amp;quot;orga_total&amp;quot; ## [10] &amp;quot;eco_wo_orga&amp;quot; &amp;quot;exp_total&amp;quot; &amp;quot;sel1&amp;quot; ## [13] &amp;quot;sel2&amp;quot; &amp;quot;sel3&amp;quot; &amp;quot;sel4&amp;quot; ## [16] &amp;quot;sel5&amp;quot; &amp;quot;sel6&amp;quot; &amp;quot;heal1&amp;quot; ## [19] &amp;quot;heal2&amp;quot; &amp;quot;heal3&amp;quot; &amp;quot;heal4&amp;quot; ## [22] &amp;quot;heal5&amp;quot; &amp;quot;sec1&amp;quot; &amp;quot;sec2&amp;quot; ## [25] &amp;quot;sec3&amp;quot; &amp;quot;sec4&amp;quot; &amp;quot;fre1&amp;quot; ## [28] &amp;quot;fre2&amp;quot; &amp;quot;fre3&amp;quot; &amp;quot;econ1&amp;quot; ## [31] &amp;quot;econ2&amp;quot; &amp;quot;econ3&amp;quot; &amp;quot;econ4&amp;quot; ## [34] &amp;quot;tast1&amp;quot; &amp;quot;tast2&amp;quot; &amp;quot;tast3&amp;quot; ## [37] &amp;quot;plea1&amp;quot; &amp;quot;plea2&amp;quot; &amp;quot;plea3&amp;quot; ## [40] &amp;quot;habi1&amp;quot; &amp;quot;habi2&amp;quot; &amp;quot;habi3&amp;quot; ## [43] &amp;quot;atti1&amp;quot; &amp;quot;atti2&amp;quot; &amp;quot;atti3&amp;quot; ## [46] &amp;quot;atti4&amp;quot; &amp;quot;atti5&amp;quot; &amp;quot;atti6&amp;quot; ## [49] &amp;quot;heal&amp;quot; &amp;quot;econ&amp;quot; &amp;quot;habit&amp;quot; ## [52] &amp;quot;info&amp;quot; &amp;quot;local&amp;quot; &amp;quot;new&amp;quot; ## [55] &amp;quot;no_add&amp;quot; &amp;quot;plea&amp;quot; &amp;quot;sec&amp;quot; ## [58] &amp;quot;taste&amp;quot; &amp;quot;ratio_orga_total&amp;quot; &amp;quot;ratio_orga_shop&amp;quot; ## [61] &amp;quot;ratio_mart_eco&amp;quot; &amp;quot;X_clus_1&amp;quot; &amp;quot;X_clus_2&amp;quot; ## [64] &amp;quot;X_clus_3&amp;quot; &amp;quot;X_clus_4&amp;quot; &amp;quot;X_clus_5&amp;quot; ## [67] &amp;quot;X_clus_6&amp;quot; &amp;quot;X_clus_7&amp;quot; &amp;quot;X_clus_8&amp;quot; ## [70] &amp;quot;X_clus_9&amp;quot; &amp;quot;X_clus_10&amp;quot; &amp;quot;X_clus_11&amp;quot; ## [73] &amp;quot;X_clus_12&amp;quot; &amp;quot;X_clus_13&amp;quot; &amp;quot;X_clus_14&amp;quot; ## [76] &amp;quot;X_clus_15&amp;quot; &amp;quot;X_clus_16&amp;quot; &amp;quot;X_clus_17&amp;quot; ## [79] &amp;quot;X_clus_18&amp;quot; &amp;quot;X_clus_19&amp;quot; &amp;quot;X_clus_20&amp;quot; ## [82] &amp;quot;X_clus_21&amp;quot; &amp;quot;X_clus_22&amp;quot; &amp;quot;X_clus_23&amp;quot; ## [85] &amp;quot;X_clus_24&amp;quot; &amp;quot;X_clus_25&amp;quot; &amp;quot;X_clus_26&amp;quot; ## [88] &amp;quot;X_clus_27&amp;quot; &amp;quot;X_clus_28&amp;quot; &amp;quot;X_clus_29&amp;quot; ## [91] &amp;quot;X_clus_30&amp;quot;DB에 있는 파일을 불러와 봅시다.</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
-    </item>
-    
-  </channel>
-</rss>
