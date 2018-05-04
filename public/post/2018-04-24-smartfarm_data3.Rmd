@@ -1,0 +1,172 @@
+---
+title: 스마트팜 데이터의 이해 (3/3)
+author: jangbak
+date: '2018-04-24'
+slug: smartfarm_data3
+categories:
+  - 환경모니터링과 제어
+tags:
+  - 스마트팜
+  - 빅데이터
+  - 환경 모니터링
+---
+
+---
+
+<center> [PREV : 스마트팜(ICT 기반 원예온실) 데이터의 이해 (2/3)](/post/smartfarm_data2) </center>
+
+---
+
+#### 스마트팜 데이터 활용 : 환경요인의 적정 범위 관리 
+
+```{r set env, include=FALSE, echo=FALSE}
+library(DT); library(widgetframe); library(dplyr); library(ggplot2); library(gridExtra)
+dat <- read.csv('env_min_spl.csv')
+dat_hour <- dat[,c(1,5,7:19)] %>% group_by(date,hour) %>% summarise_all(funs(mean))
+```
+
+``` {r guide function, include=F, echo=F}
+gd_maker <- function(gd_tbl,day_start, day_end, ngt_start, ngt_end, variable, dhi, dlo, nhi, nlo ) {
+  var_hi <- paste(variable,"_hi",sep="")
+  var_lo <- paste(variable,"_lo",sep="")
+  for(i in 0:24){
+    if(i<=ngt_end){
+      gd_tbl[i+1,var_hi] <- nhi
+      gd_tbl[i+1,var_lo] <- nlo
+    } else if(i>ngt_end && i<day_start) {
+      gd_tbl[i+1,var_hi] <- nhi + (i-ngt_end)*(dhi - nhi)/(day_start - ngt_end)
+      gd_tbl[i+1,var_lo] <- nlo + (i-ngt_end)*(dlo - nlo)/(day_start - ngt_end)   
+    } else if(i>=day_start && i<=day_end ) {
+      gd_tbl[i+1,var_hi] <- dhi
+      gd_tbl[i+1,var_lo] <- dlo
+    } else if(i>day_end && i<ngt_start) {
+      gd_tbl[i+1,var_hi] <- dhi - (i-day_end)*(dhi - nhi)/(ngt_start - day_end)
+      gd_tbl[i+1,var_lo] <- dlo - (i-day_end)*(dlo - nlo)/(ngt_start - day_end)   
+    } else if(i>=ngt_start) {
+      gd_tbl[i+1,var_hi] <- nhi
+      gd_tbl[i+1,var_lo] <- nlo
+    }
+  }
+  return(gd_tbl)
+}
+gd_tbl <- data.frame(hour=seq(0,24,1), tp_hi=rep(NA,25), tp_lo=rep(NA,25))
+gd_tbl <- gd_maker(gd_tbl,10,16,19,7,'tp',29.5,21,21,15.5)
+```
+
+앞선 두번째 Post에서 스마트팜 데이터의 요약에 대해서 살펴보았다면 세번째 Post에서는 실제 현장에서 스마트팜을 운영을 할 때는 스마트팜 데이터가 어떻게 활용될 수 있는지를 살펴보자. 
+
+아래 그림의 X축은 0 ~ 24시까지를 나타내는 시간축, Y축은 15 ~ 30도 사이의 온실 실내온도 나타내는 도면이다. 반투명 빨간색 띠는 시간대별로 관리되어야 하는 온실 실내온도의 적정 범위를 표현한 것이다. 적정범위의 기준은 농촌진흥청 자료집과 구글링으로 조사된 기준 온도에서 상하한에 여유범위를 고려하여 정하였다. 적정범위를 표현하는 `gd_tbl` 데이터의 생성 코드는 Post 최하단에 수록하였다. [(바로가기)](#guide_code) 
+
+``` {r guide plot, include=TRUE, echo=TRUE, fig.height=3}
+ggplot() + 
+  geom_ribbon(data=gd_tbl, aes(x=hour, ymin=tp_lo, ymax=tp_hi), linetype=2, alpha=0.1, fill='red') + 
+  labs(x = "시", y = "실내온도") + 
+  scale_x_continuous(limits = c(0, 24), breaks=c(0,6,12,18,24)) +
+  labs(title = "파프리카 적정 실내온도 범위") 
+```
+
+이제 이 위에 실제 온실에서 측정된 실내온도 데이터를 그래프로 그려보자. 2015년4월19일 ~ 4월23일 5일간 데이터는 5개의 서로다른 색깔의 그래프로 표현되었다. 대체로 적정 범위 내에서 실내온도가 관리되고 있는 것을 확인할 수 있다. 4월19 ~ 20일은 주간온도가 하한선에 가까이 있고  4월21일 ~ 23일은 상한선에 가까이 있는데 19 ~ 20일에는 날씨가 흐려서 일사에 의한 내부온도 상승 폭이 크지 않았던 것으로 추측해볼 수 있을 것이다. 이 외에도 4월19일은 야간 시간에 상한선을 많이 벗어났고, 4월21일 초록색 그래프에서는 15시경에 상한선을 잠시 넘었고, 4월22일 파란색 그래프에서는 12시 전후로 상한선을 조금씩 넘어간 것을 확인할 수 있다. 21 ~ 23일 17 ~ 19시 사이에도 적정범위를 벗어나고 있으나 벗어나는 패턴이 비슷한 것을 보면 농장에서는 기준을 가지고 관리하는 것으로 판단된다. 따라서 적정범위 가이드라인 기준을 이 농장에 맞게 수정하는 것이 바람직할 것이다. 
+
+``` {r plot1, include=T, echo=TRUE, fig.height=3}
+dat_f3 <- dat %>% filter(as.character(date)>='2015-04-19', as.character(date)<='2015-04-23') 
+ggplot() +
+  geom_ribbon(data=gd_tbl, aes(x=hour, ymin=tp_lo, ymax=tp_hi), linetype=2, alpha=0.1, fill='red') + 
+  geom_line(data=dat_f3,aes(x=hour+minute/60, y=EVTP, group=date, color=date), size = 0.5, alpha = 1.0) +
+  labs(x = "일", y = "측정치") + scale_x_continuous(limits = c(0, 24), breaks=c(0,6,12,18,24)) +
+  labs(title = "파프리카 적정 실내온도 범위와 4월 실내온도 관리") 
+```
+
+비슷한 방법으로 여름철의 온도 관리 상황을 살펴보자. `filter()` 함수에 날짜 기준을 2015년6월19일 ~ 6월23일 5일간으로 수정해서 동일한 코드를 실행하면 아래의 그래프를 확인할 수 있다. 전체적으로 4월보다 실내온도가 높아져서 적정범위를 초과하고 있다. 
+
+``` {r plot2, include=T, echo=F, fig.height=3}
+dat_f4 <- dat %>% filter(as.character(date)>='2015-06-19', as.character(date)<='2015-06-23') 
+ggplot() +
+  geom_ribbon(data=gd_tbl, aes(x=hour, ymin=tp_lo, ymax=tp_hi), linetype=2, alpha=0.1, fill='red') + 
+  geom_line(data=dat_f4,aes(x=hour+minute/60, y=EVTP, group=date, color=date), size = 0.5, alpha = 1.0) +
+  labs(x = "일", y = "측정치") + scale_x_continuous(limits = c(0, 24), breaks=c(0,6,12,18,24)) +
+  labs(title = "파프리카 적정 실내온도 범위와 6월 실내온도 관리") 
+```
+
+이제 겨울철의 온도 관리 상황을 살펴보자. `filter()` 함수에 날짜 기준을 2015년12월19일 ~ 12월23일 5일간으로 수정해서 동일한 코드를 실행하면 아래의 그래프를 확인할 수 있다. 전체적으로 4월보다 실내온도가 낮아져서 적정범위를 밑돌고 있다. 
+
+``` {r plot3, include=T, echo=F, fig.height=3}
+dat_f5 <- dat %>% filter(as.character(date)>='2015-12-19', as.character(date)<='2015-12-23') 
+ggplot() +
+  geom_ribbon(data=gd_tbl, aes(x=hour, ymin=tp_lo, ymax=tp_hi), linetype=2, alpha=0.1, fill='red') + 
+  geom_line(data=dat_f5,aes(x=hour+minute/60, y=EVTP, group=date, color=date), size = 0.5, alpha = 1.0) +
+  labs(x = "일", y = "측정치") + scale_x_continuous(limits = c(0, 24), breaks=c(0,6,12,18,24)) +
+  labs(title = "파프리카 적정 실내온도 범위와 11월 실내온도 관리") 
+```
+
+지금까지 스마트팜 데이터 활용 예시로 온실 내부온도 데이터를 이용한 환경요인 적정범위 관리의 기초가 되는 개념을 설명하였다. 스마트팜 온실 내부 환경 관리의 핵심은 재배되는 작물이 가지는 고유의 최적 생장 환경 조건을 일정하게 유지해주는 것이다. 내부온도의 최적범위가 있는 것처럼  마찬가지로 CO2농도, 습도의 최적범위도 있다. 일사량은 통제하기는 어려우나 이 역시 최적 범위가 존재하고 일사량은 광합성에 직접적인 영향을 주기 때문에 CO2 농도는 일사량에 따라 필요량이 달라지게 된다. 여러 환경요인들이 독립적이지 않고 각각의 관계식에 의해서 최적조건이 상황에 따라 달라질 수 있는 것이다. 
+
+뿐만아니라 앞서 살펴본 것과 같이 주간 적정온도와 야간 적정온도 범위가 있다고 하더라도 이는 작물의 생장주기(개화기, 생식생장기, 영양생장기 등)에 따라서 달라지게 된다. 또한 같은 작물이더라도 품종에 따라서도 달라질 수 있다. 농장주의 생산 목표가 크기를 크게하는 것이냐 적당한 크기에 당도를 높이는 것이냐에 따라서도 달라진다. 여러가지 상황에 따라서 환경요인의 최적 범위가 달라지기 때문에 상황에 맞는 최적 범위가 무엇인지 아는 것이 핵심 중의 핵심이 되겠다. 
+
+---
+
+#### 스마트팜 데이터 활용 : 실제 관리 시스템에서는?
+
+실시간 데이터를 이용한 최적환경을 유지하는 기술은 이미 네덜란드와 같은 농업선진국에서는 1980년대부터 상용화되어 사용되고 있다. 시설원예 온실의 경우 창문(천창,측창)을 이용해서 외부 공기를 유입하여 실내온도를 조절하고 천장 스크린으로 햇빛을 가려 과도한 온도 상승을 막기도 한다. CO2 시비기를 사용해서 CO2 농도를 높이기도 하고, 겨울철에는 보일러를 이용해서 실내온도를 높이기도 한다. 여름철 내부 온도를 낮추기 위해서 포그기를 이용해서 기화열을 이용하기도 한다. 이와 같은 제어기들을 최적으로 운영하는 알고리즘은 이미 상용화되어 사용되고 있다. 
+
+문제는 최적 환경을 유지하는 기술은 발전해 있으나 현재 시점에서 생산목표에 부합하는 최적 환경이 무엇인지에 대한 지식은 공식적으로 알려져 있는 것이 없다. 여러 조건이 통제되는 실험실 연구에서는 공식을 도출할 수 있는지 모르겠으나 농업 현장의 실제 온실들에서는 지역의 차이나 시설 유형의 차이에 따라 조건이 달라지기 때문에 상황별 최적 환경 조건을 파악하는 것이 쉬운 일이 아니다. 
+
+스마트팜 관련 연구에서의 병목점 중 하나가 바로 상황별 최적 환경 조건을 찾는 문제이다. 이 문제를 제대로 해결하기 위해서는 작물의 생육량을 파악해서 어떤 환경일 때 원하는 방향으로 생육을 하는지 파악해야 하는데 이 영역으로 가게 되면 이미지 프로세싱 기술에 의한 생육 요인 자동 측정이라는 어마어마한 기술적 난제를 만나게 된다. 
+
+이상적인 스마트팜이 갖춰야할 모습을 상상하다보니 비관적인 이야기만 한 것 같은데 적절한 수준에서의 생산성 향상을 목표로 한다면 상황별 최적 조건을 단순화하고 데이터를 축적하면서 조금씩 앞으로 나아가는 방법도 있다. 희망을 가지자. 
+
+각각의 환경요소의 제어 방법에 대한 내용은 [온실환경 관리대상과 에너지 절감 요소](/post/env_cont_energy_reduce) Post에 보다 구체적으로 설명되어 있다. 
+
+---
+
+##### R shinydashboard 패키지로 만든 ICT 온실 대시보드 프로토타입 서비스 
+
+아래 링크는 `"시설농업 ICT융합 운영활성화 모델 개발"` 연구과제를 수행하면서 스마트 온실 데이터를 이용해서 모니터링 및 분석 서비스 개발을 어떻게 하는 것이 효과적일지 고민하면서 만든 프로토타입 서비스이다. 몇몇 기능은 연구 종료 후 데이터 업데이트가 되지 않아서 현재는 동작하지 않는 것들도 있다. 
+
+[바로가기 : ICT 온실 대시보드 프로토타입 서비스](http://147.46.228.238:3838/tomato/)
+
+---
+
+<a id="guide_code"></a>
+
+#### <부록>
+
+`gd_maker()` 함수는 R패키지에 사전에 정의된 함수가 아닌 사용자 작성 함수이다. 입력 파라메터로 0~24시까지의 시간별 상하한 데이터(입력시에는 빈테이블), 주간시작시간 `day_start`, 주간종료시간 `day_end`, 야간시작시간 `ngt_start`, 야간종료시간 `ngt_end`, 환경요인변수 `variable`, 주간상한값 `dhi`, 주간하한값 `dlo`, 야간상한값 `nhi`, 야간하한값 `nlo`를 받고 함수 내부에서 입력파라메터들을 처리한 후 출력값을 `return()` 함수로 되돌려준다. 함수 내의 코드는 주간과 야간의 시작과 끝점을 상한과 하한값 높이의 수평 평행선을 긋고 단절된 평행선을 사선으로 이어주는 점들을 0~24시까지의 시간단위의 25개 지점의 값을 `gd_tbl`에 저장하는 작업을 한다. 
+
+``` {r guide function2, include=T, echo=T}
+gd_maker <- function(gd_tbl,day_start, day_end, ngt_start, ngt_end, variable, dhi, dlo, nhi, nlo ) {
+  var_hi <- paste(variable,"_hi",sep="")
+  var_lo <- paste(variable,"_lo",sep="")
+  for(i in 0:24){
+    if(i<=ngt_end){
+      gd_tbl[i+1,var_hi] <- nhi
+      gd_tbl[i+1,var_lo] <- nlo
+    } else if(i>ngt_end && i<day_start) {
+      gd_tbl[i+1,var_hi] <- nhi + (i-ngt_end)*(dhi - nhi)/(day_start - ngt_end)
+      gd_tbl[i+1,var_lo] <- nlo + (i-ngt_end)*(dlo - nlo)/(day_start - ngt_end)   
+    } else if(i>=day_start && i<=day_end ) {
+      gd_tbl[i+1,var_hi] <- dhi
+      gd_tbl[i+1,var_lo] <- dlo
+    } else if(i>day_end && i<ngt_start) {
+      gd_tbl[i+1,var_hi] <- dhi - (i-day_end)*(dhi - nhi)/(ngt_start - day_end)
+      gd_tbl[i+1,var_lo] <- dlo - (i-day_end)*(dlo - nlo)/(ngt_start - day_end)   
+    } else if(i>=ngt_start) {
+      gd_tbl[i+1,var_hi] <- nhi
+      gd_tbl[i+1,var_lo] <- nlo
+    }
+  }
+  return(gd_tbl)
+}
+```
+
+`gd_maker()` 함수 실행전 빈 껎데기 데이터셋으로 0 ~ 24까지 25 값을 가지는 `hour`변수, `NA`값만 25개 가지는 `tp_hi`, `tp_lo` 변수를 생성한다.
+
+``` {r empty guide, include=T, echo=T}
+gd_tbl <- data.frame(hour=seq(0,24,1), tp_hi=rep(NA,25), tp_lo=rep(NA,25))
+```
+
+`gd_maker()` 함수의 입력 파라메터로 주간은 10 ~ 16시, 야간은 19 ~ 익일7시, 변수명은 온도를 의미하는 tp, 주간온도 상한은 29.5, 하한은 21도, 야간온도 상한은 21, 하한은 15.5도가 되도록 설정하였다. 주간과 야간 사이의 비어있는 7 ~ 10시, 16 ~ 19시는 주간/야간 상하한값을 사선으로 연결한 결과가 `gd_tbl` 데이터에 저장이 된다. 
+
+``` {r create guide, include=T, echo=T}
+gd_tbl <- gd_maker(gd_tbl,10,16,19,7,'tp',29.5,21,21,15.5)
+```
+

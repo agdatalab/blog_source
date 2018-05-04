@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>스마트팜 데이터의 이해 (3/3)</title>
+<meta name="description" content="Connect Everything in Agriculture">
+<meta name="generator" content="Hugo 0.38.2" />
+<meta property="og:title" content="스마트팜 데이터의 이해 (3/3)" />
+<meta property="og:description" content="PREV : 스마트팜(ICT 기반 원예온실) 데이터의 이해 (2/3)스마트팜 데이터 활용 : 환경요인의 적정 범위 관리앞선 두번째 Post에서 스마트팜 데이터의 요약에 대해서 살펴보았다면 세번째 Post에서는 실제 현장에서 스마트팜을 운영을 할 때는 스마트팜 데이터가 어떻게 활용될 수 있는지를 살펴보자.
+아래 그림의 X축은 0 ~ 24시까지를 나타내는 시간축, Y축은 15 ~ 30도 사이의 온실 실내온도 나타내는 도면이다. 반투명 빨간색 띠는 시간대별로 관리되어야 하는 온실 실내온도의 적정 범위를 표현한 것이다. 적정범위의 기준은 농촌진흥청 자료집과 구글링으로 조사된 기준 온도에서 상하한에 여유범위를 고려하여 정하였다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/smartfarm_data3/" />
+
+
+
+<meta property="article:published_time" content="2018-04-24T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-04-24T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/scripts.js"></script>
+<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="AgData Lab" rel="home">
+						<h1 class="logo__title">AgData Lab</h1>
+						<h2 class="logo__tagline">서울대학교 농업정보시스템 연구실</h2>
+					</a>
+				</div>
+			</div>
+			
+<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		<li class="menu__item"><a class="menu__link" href="/about">ABOUT</a></li>
+		<li class="menu__item"><a class="menu__link" href="/topic_categories">CATEGORIES</a></li>
+		<li class="menu__item"><a class="menu__link" href="/paper_review">PAPER REVIEW</a></li>
+		<li class="menu__item"><a class="menu__link" href="/news_scrap">NEWS SCRAP</a></li>
+		<li class="menu__item"><a class="menu__link" href="/lab_activity">LAB ACTIVITY</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper clearfix">
+
+<main class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		<header class="post__header clearfix">
+			<h1 class="post__title">스마트팜 데이터의 이해 (3/3)</h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2018-04-24T00:00:00">April 24, 2018</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/%ed%99%98%ea%b2%bd%eb%aa%a8%eb%8b%88%ed%84%b0%eb%a7%81%ea%b3%bc-%ec%a0%9c%ec%96%b4" rel="category">환경모니터링과 제어</a></span>
+			</p>
+		</header>
+		<div class="post__content clearfix">
+			<hr />
+<center>
+<a href="/post/smartfarm_data2">PREV : 스마트팜(ICT 기반 원예온실) 데이터의 이해 (2/3)</a>
+</center>
+<hr />
+<div id="------" class="section level4">
+<h4>스마트팜 데이터 활용 : 환경요인의 적정 범위 관리</h4>
+<p>앞선 두번째 Post에서 스마트팜 데이터의 요약에 대해서 살펴보았다면 세번째 Post에서는 실제 현장에서 스마트팜을 운영을 할 때는 스마트팜 데이터가 어떻게 활용될 수 있는지를 살펴보자.</p>
+<p>아래 그림의 X축은 0 ~ 24시까지를 나타내는 시간축, Y축은 15 ~ 30도 사이의 온실 실내온도 나타내는 도면이다. 반투명 빨간색 띠는 시간대별로 관리되어야 하는 온실 실내온도의 적정 범위를 표현한 것이다. 적정범위의 기준은 농촌진흥청 자료집과 구글링으로 조사된 기준 온도에서 상하한에 여유범위를 고려하여 정하였다. 적정범위를 표현하는 <code>gd_tbl</code> 데이터의 생성 코드는 Post 최하단에 수록하였다. <a href="#guide_code">(바로가기)</a></p>
+<pre class="r"><code>ggplot() + 
+  geom_ribbon(data=gd_tbl, aes(x=hour, ymin=tp_lo, ymax=tp_hi), linetype=2, alpha=0.1, fill=&#39;red&#39;) + 
+  labs(x = &quot;시&quot;, y = &quot;실내온도&quot;) + 
+  scale_x_continuous(limits = c(0, 24), breaks=c(0,6,12,18,24)) +
+  labs(title = &quot;파프리카 적정 실내온도 범위&quot;) </code></pre>
+<p><img src="/post/2018-04-24-smartfarm_data3_files/figure-html/guide%20plot-1.png" width="672" /></p>
+<p>이제 이 위에 실제 온실에서 측정된 실내온도 데이터를 그래프로 그려보자. 2015년4월19일 ~ 4월23일 5일간 데이터는 5개의 서로다른 색깔의 그래프로 표현되었다. 대체로 적정 범위 내에서 실내온도가 관리되고 있는 것을 확인할 수 있다. 4월19 ~ 20일은 주간온도가 하한선에 가까이 있고 4월21일 ~ 23일은 상한선에 가까이 있는데 19 ~ 20일에는 날씨가 흐려서 일사에 의한 내부온도 상승 폭이 크지 않았던 것으로 추측해볼 수 있을 것이다. 이 외에도 4월19일은 야간 시간에 상한선을 많이 벗어났고, 4월21일 초록색 그래프에서는 15시경에 상한선을 잠시 넘었고, 4월22일 파란색 그래프에서는 12시 전후로 상한선을 조금씩 넘어간 것을 확인할 수 있다. 21 ~ 23일 17 ~ 19시 사이에도 적정범위를 벗어나고 있으나 벗어나는 패턴이 비슷한 것을 보면 농장에서는 기준을 가지고 관리하는 것으로 판단된다. 따라서 적정범위 가이드라인 기준을 이 농장에 맞게 수정하는 것이 바람직할 것이다.</p>
+<pre class="r"><code>dat_f3 &lt;- dat %&gt;% filter(as.character(date)&gt;=&#39;2015-04-19&#39;, as.character(date)&lt;=&#39;2015-04-23&#39;) 
+ggplot() +
+  geom_ribbon(data=gd_tbl, aes(x=hour, ymin=tp_lo, ymax=tp_hi), linetype=2, alpha=0.1, fill=&#39;red&#39;) + 
+  geom_line(data=dat_f3,aes(x=hour+minute/60, y=EVTP, group=date, color=date), size = 0.5, alpha = 1.0) +
+  labs(x = &quot;일&quot;, y = &quot;측정치&quot;) + scale_x_continuous(limits = c(0, 24), breaks=c(0,6,12,18,24)) +
+  labs(title = &quot;파프리카 적정 실내온도 범위와 4월 실내온도 관리&quot;) </code></pre>
+<p><img src="/post/2018-04-24-smartfarm_data3_files/figure-html/plot1-1.png" width="672" /></p>
+<p>비슷한 방법으로 여름철의 온도 관리 상황을 살펴보자. <code>filter()</code> 함수에 날짜 기준을 2015년6월19일 ~ 6월23일 5일간으로 수정해서 동일한 코드를 실행하면 아래의 그래프를 확인할 수 있다. 전체적으로 4월보다 실내온도가 높아져서 적정범위를 초과하고 있다.</p>
+<p><img src="/post/2018-04-24-smartfarm_data3_files/figure-html/plot2-1.png" width="672" /></p>
+<p>이제 겨울철의 온도 관리 상황을 살펴보자. <code>filter()</code> 함수에 날짜 기준을 2015년12월19일 ~ 12월23일 5일간으로 수정해서 동일한 코드를 실행하면 아래의 그래프를 확인할 수 있다. 전체적으로 4월보다 실내온도가 낮아져서 적정범위를 밑돌고 있다.</p>
+<p><img src="/post/2018-04-24-smartfarm_data3_files/figure-html/plot3-1.png" width="672" /></p>
+<p>지금까지 스마트팜 데이터 활용 예시로 온실 내부온도 데이터를 이용한 환경요인 적정범위 관리의 기초가 되는 개념을 설명하였다. 스마트팜 온실 내부 환경 관리의 핵심은 재배되는 작물이 가지는 고유의 최적 생장 환경 조건을 일정하게 유지해주는 것이다. 내부온도의 최적범위가 있는 것처럼 마찬가지로 CO2농도, 습도의 최적범위도 있다. 일사량은 통제하기는 어려우나 이 역시 최적 범위가 존재하고 일사량은 광합성에 직접적인 영향을 주기 때문에 CO2 농도는 일사량에 따라 필요량이 달라지게 된다. 여러 환경요인들이 독립적이지 않고 각각의 관계식에 의해서 최적조건이 상황에 따라 달라질 수 있는 것이다.</p>
+<p>뿐만아니라 앞서 살펴본 것과 같이 주간 적정온도와 야간 적정온도 범위가 있다고 하더라도 이는 작물의 생장주기(개화기, 생식생장기, 영양생장기 등)에 따라서 달라지게 된다. 또한 같은 작물이더라도 품종에 따라서도 달라질 수 있다. 농장주의 생산 목표가 크기를 크게하는 것이냐 적당한 크기에 당도를 높이는 것이냐에 따라서도 달라진다. 여러가지 상황에 따라서 환경요인의 최적 범위가 달라지기 때문에 상황에 맞는 최적 범위가 무엇인지 아는 것이 핵심 중의 핵심이 되겠다.</p>
+<hr />
+</div>
+<div id="-----" class="section level4">
+<h4>스마트팜 데이터 활용 : 실제 관리 시스템에서는?</h4>
+<p>실시간 데이터를 이용한 최적환경을 유지하는 기술은 이미 네덜란드와 같은 농업선진국에서는 1980년대부터 상용화되어 사용되고 있다. 시설원예 온실의 경우 창문(천창,측창)을 이용해서 외부 공기를 유입하여 실내온도를 조절하고 천장 스크린으로 햇빛을 가려 과도한 온도 상승을 막기도 한다. CO2 시비기를 사용해서 CO2 농도를 높이기도 하고, 겨울철에는 보일러를 이용해서 실내온도를 높이기도 한다. 여름철 내부 온도를 낮추기 위해서 포그기를 이용해서 기화열을 이용하기도 한다. 이와 같은 제어기들을 최적으로 운영하는 알고리즘은 이미 상용화되어 사용되고 있다.</p>
+<p>문제는 최적 환경을 유지하는 기술은 발전해 있으나 현재 시점에서 생산목표에 부합하는 최적 환경이 무엇인지에 대한 지식은 공식적으로 알려져 있는 것이 없다. 여러 조건이 통제되는 실험실 연구에서는 공식을 도출할 수 있는지 모르겠으나 농업 현장의 실제 온실들에서는 지역의 차이나 시설 유형의 차이에 따라 조건이 달라지기 때문에 상황별 최적 환경 조건을 파악하는 것이 쉬운 일이 아니다.</p>
+<p>스마트팜 관련 연구에서의 병목점 중 하나가 바로 상황별 최적 환경 조건을 찾는 문제이다. 이 문제를 제대로 해결하기 위해서는 작물의 생육량을 파악해서 어떤 환경일 때 원하는 방향으로 생육을 하는지 파악해야 하는데 이 영역으로 가게 되면 이미지 프로세싱 기술에 의한 생육 요인 자동 측정이라는 어마어마한 기술적 난제를 만나게 된다.</p>
+<p>이상적인 스마트팜이 갖춰야할 모습을 상상하다보니 비관적인 이야기만 한 것 같은데 적절한 수준에서의 생산성 향상을 목표로 한다면 상황별 최적 조건을 단순화하고 데이터를 축적하면서 조금씩 앞으로 나아가는 방법도 있다. 희망을 가지자.</p>
+<p>각각의 환경요소의 제어 방법에 대한 내용은 <a href="/post/env_cont_energy_reduce">온실환경 관리대상과 에너지 절감 요소</a> Post에 보다 구체적으로 설명되어 있다.</p>
+<hr />
+<div id="r-shinydashboard---ict----" class="section level5">
+<h5>R shinydashboard 패키지로 만든 ICT 온실 대시보드 프로토타입 서비스</h5>
+<p>아래 링크는 <code>&quot;시설농업 ICT융합 운영활성화 모델 개발&quot;</code> 연구과제를 수행하면서 스마트 온실 데이터를 이용해서 모니터링 및 분석 서비스 개발을 어떻게 하는 것이 효과적일지 고민하면서 만든 프로토타입 서비스이다. 몇몇 기능은 연구 종료 후 데이터 업데이트가 되지 않아서 현재는 동작하지 않는 것들도 있다.</p>
+<p><a href="http://147.46.228.238:3838/tomato/">바로가기 : ICT 온실 대시보드 프로토타입 서비스</a></p>
+<hr />
+<p><a id="guide_code"></a></p>
+</div>
+</div>
+<div id="section" class="section level4">
+<h4><부록></h4>
+<p><code>gd_maker()</code> 함수는 R패키지에 사전에 정의된 함수가 아닌 사용자 작성 함수이다. 입력 파라메터로 0~24시까지의 시간별 상하한 데이터(입력시에는 빈테이블), 주간시작시간 <code>day_start</code>, 주간종료시간 <code>day_end</code>, 야간시작시간 <code>ngt_start</code>, 야간종료시간 <code>ngt_end</code>, 환경요인변수 <code>variable</code>, 주간상한값 <code>dhi</code>, 주간하한값 <code>dlo</code>, 야간상한값 <code>nhi</code>, 야간하한값 <code>nlo</code>를 받고 함수 내부에서 입력파라메터들을 처리한 후 출력값을 <code>return()</code> 함수로 되돌려준다. 함수 내의 코드는 주간과 야간의 시작과 끝점을 상한과 하한값 높이의 수평 평행선을 긋고 단절된 평행선을 사선으로 이어주는 점들을 0~24시까지의 시간단위의 25개 지점의 값을 <code>gd_tbl</code>에 저장하는 작업을 한다.</p>
+<pre class="r"><code>gd_maker &lt;- function(gd_tbl,day_start, day_end, ngt_start, ngt_end, variable, dhi, dlo, nhi, nlo ) {
+  var_hi &lt;- paste(variable,&quot;_hi&quot;,sep=&quot;&quot;)
+  var_lo &lt;- paste(variable,&quot;_lo&quot;,sep=&quot;&quot;)
+  for(i in 0:24){
+    if(i&lt;=ngt_end){
+      gd_tbl[i+1,var_hi] &lt;- nhi
+      gd_tbl[i+1,var_lo] &lt;- nlo
+    } else if(i&gt;ngt_end &amp;&amp; i&lt;day_start) {
+      gd_tbl[i+1,var_hi] &lt;- nhi + (i-ngt_end)*(dhi - nhi)/(day_start - ngt_end)
+      gd_tbl[i+1,var_lo] &lt;- nlo + (i-ngt_end)*(dlo - nlo)/(day_start - ngt_end)   
+    } else if(i&gt;=day_start &amp;&amp; i&lt;=day_end ) {
+      gd_tbl[i+1,var_hi] &lt;- dhi
+      gd_tbl[i+1,var_lo] &lt;- dlo
+    } else if(i&gt;day_end &amp;&amp; i&lt;ngt_start) {
+      gd_tbl[i+1,var_hi] &lt;- dhi - (i-day_end)*(dhi - nhi)/(ngt_start - day_end)
+      gd_tbl[i+1,var_lo] &lt;- dlo - (i-day_end)*(dlo - nlo)/(ngt_start - day_end)   
+    } else if(i&gt;=ngt_start) {
+      gd_tbl[i+1,var_hi] &lt;- nhi
+      gd_tbl[i+1,var_lo] &lt;- nlo
+    }
+  }
+  return(gd_tbl)
+}</code></pre>
+<p><code>gd_maker()</code> 함수 실행전 빈 껎데기 데이터셋으로 0 ~ 24까지 25 값을 가지는 <code>hour</code>변수, <code>NA</code>값만 25개 가지는 <code>tp_hi</code>, <code>tp_lo</code> 변수를 생성한다.</p>
+<pre class="r"><code>gd_tbl &lt;- data.frame(hour=seq(0,24,1), tp_hi=rep(NA,25), tp_lo=rep(NA,25))</code></pre>
+<p><code>gd_maker()</code> 함수의 입력 파라메터로 주간은 10 ~ 16시, 야간은 19 ~ 익일7시, 변수명은 온도를 의미하는 tp, 주간온도 상한은 29.5, 하한은 21도, 야간온도 상한은 21, 하한은 15.5도가 되도록 설정하였다. 주간과 야간 사이의 비어있는 7 ~ 10시, 16 ~ 19시는 주간/야간 상하한값을 사선으로 연결한 결과가 <code>gd_tbl</code> 데이터에 저장이 된다.</p>
+<pre class="r"><code>gd_tbl &lt;- gd_maker(gd_tbl,10,16,19,7,&#39;tp&#39;,29.5,21,21,15.5)</code></pre>
+</div>
+
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8C%9C/" rel="tag">스마트팜</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/%EB%B9%85%EB%8D%B0%EC%9D%B4%ED%84%B0/" rel="tag">빅데이터</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/%ED%99%98%EA%B2%BD-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81/" rel="tag">환경 모니터링</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+
+<div class="authorbox clearfix">
+
+  
+
+    
+
+	
+
+		<figure class="authorbox__avatar">
+
+			<img alt="장박 avatar" src="/img/jangbak.jpg" class="avatar" height="90" width="90">
+
+		</figure>
+
+		<div class="authorbox__header">
+
+			<span class="authorbox__name">About 장박</span>
+
+		</div>
+
+		<div class="authorbox__description">
+
+			장박은 농업정보시스템 연구실에서 오랜시간 숙성되고 있는 농업데이터사이언티스트이다.
+
+		</div>
+
+	
+
+  
+
+</div>
+
+
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/new_fujitsu_ai/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">후지쯔와 큐슈대학, 농업생산을 위한 AI 공동연구</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next col-1-2">
+		<a class="post-nav__link" href="/post/dl_cnn/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Deep Learning &amp; Convolutional Neural Network (랩세미나)</p></a>
+	</div>
+</nav>
+
+	
+</main>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+<div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
+		<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="/" />
+	</form>
+</div>
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/ict_convergence_tech_ppt/">농식품 분야 ICT 융합 해외 최신 기술 동향 (2014.5.15)</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/glm_ach/">GLM을 이용한 대학학업 성취도 분석 (랩스터디)</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/env_cont_energy_reduce/">온실환경 관리대상과 에너지 절감 요소</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dl_cnn/">Deep Learning &amp; Convolutional Neural Network (랩세미나)</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/smartfarm_data3/">스마트팜 데이터의 이해 (3/3)</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/new_fujitsu_ai/">후지쯔와 큐슈대학, 농업생산을 위한 AI 공동연구</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/smartfarm_data2/">스마트팜 데이터의 이해 (2/2)</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/smartfarm_data/">스마트팜 데이터의 이해 (1/3)</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/2015-07-23-r-rmarkdown/">Hello R Markdown</a></li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/%ea%b3%bc%ed%95%99%ea%b3%bc-%ea%b8%b0%ec%88%a0">과학과-기술</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%ea%b8%b0%ed%83%80%eb%b0%9c%ed%91%9c%ec%9e%90%eb%a3%8c">기타발표자료</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%eb%85%bc%eb%ac%b8%eb%a6%ac%eb%b7%b0">논문리뷰</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%eb%89%b4%ec%8a%a4-%ec%8a%a4%ed%81%ac%eb%9e%a9">뉴스-스크랩</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%eb%9e%a9%ec%84%b8%eb%af%b8%eb%82%98">랩세미나</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%eb%9e%a9%ec%8a%a4%ed%84%b0%eb%94%94">랩스터디</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%ed%99%98%ea%b2%bd%eb%aa%a8%eb%8b%88%ed%84%b0%eb%a7%81%ea%b3%bc-%ec%a0%9c%ec%96%b4">환경모니터링과-제어</a></li>
+		</ul>
+	</div>
+</div>
+	
+
+	
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget__link widget__link--taglist" href="/tags/ai" title="ai">ai</a>
+		<a class="widget__link widget__link--taglist" href="/tags/convolutional-neural-network" title="convolutional-neural-network">convolutional-neural-network</a>
+		<a class="widget__link widget__link--taglist" href="/tags/deep-learning" title="deep-learning">deep-learning</a>
+		<a class="widget__link widget__link--taglist" href="/tags/glm" title="glm">glm</a>
+		<a class="widget__link widget__link--taglist" href="/tags/plot" title="plot">plot</a>
+		<a class="widget__link widget__link--taglist" href="/tags/r-markdown" title="r-markdown">r-markdown</a>
+		<a class="widget__link widget__link--taglist" href="/tags/regression" title="regression">regression</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%eb%b9%85%eb%8d%b0%ec%9d%b4%ed%84%b0" title="빅데이터">빅데이터</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%ec%83%9d%ec%9c%a1%eb%aa%a8%eb%8d%b8" title="생육모델">생육모델</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%ec%8a%a4%eb%a7%88%ed%8a%b8%ed%8c%9c" title="스마트팜">스마트팜</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%ed%99%98%ea%b2%bd-%eb%aa%a8%eb%8b%88%ed%84%b0%eb%a7%81" title="환경-모니터링">환경-모니터링</a>
+	</div>
+</div>
+</aside>
+
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2018 AgData Lab. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+</body>
+</html>

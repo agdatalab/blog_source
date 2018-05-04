@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>스마트팜 on AgData Lab</title>
+    <link>/tags/%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8C%9C/</link>
+    <description>Recent content in 스마트팜 on AgData Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8C%9C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>온실환경 관리대상과 에너지 절감 요소</title>
+      <link>/post/env_cont_energy_reduce/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/env_cont_energy_reduce/</guid>
+      <description>도입네덜란드 Priva社는 오랜 연구개발로 축적된 기술과 노하우로 유리온실 기술에서 세계적으로 가장 앞서가고 있고 국내에도 선도 농가 중심으로 일부 도입이 되어 활용되고 있다. 그러나 대규모 유리온실 단지를 조성하기 어려운 우리나라의 농업 현실에서는 투자대비 수익성이 높지 않아 유럽형 유리온실의 확산은 원활하지 않다. 최근 농업현장에서 한국형 스마트팜이 확산되면서 ICT 기반의 연동형 비닐온실이 확산되고 있고, 센서 데이터를 이용한 온실환경 자동제어 기술의 중요성이 높아지고 있으나 아직까지는 기술 개발 초기 단계로 상용화 단계까지는 이르지 못하고 있다.</description>
+    </item>
+    
+    <item>
+      <title>스마트팜 데이터의 이해 (3/3)</title>
+      <link>/post/smartfarm_data3/</link>
+      <pubDate>Tue, 24 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/smartfarm_data3/</guid>
+      <description>PREV : 스마트팜(ICT 기반 원예온실) 데이터의 이해 (2/3)스마트팜 데이터 활용 : 환경요인의 적정 범위 관리앞선 두번째 Post에서 스마트팜 데이터의 요약에 대해서 살펴보았다면 세번째 Post에서는 실제 현장에서 스마트팜을 운영을 할 때는 스마트팜 데이터가 어떻게 활용될 수 있는지를 살펴보자.
+아래 그림의 X축은 0 ~ 24시까지를 나타내는 시간축, Y축은 15 ~ 30도 사이의 온실 실내온도 나타내는 도면이다. 반투명 빨간색 띠는 시간대별로 관리되어야 하는 온실 실내온도의 적정 범위를 표현한 것이다. 적정범위의 기준은 농촌진흥청 자료집과 구글링으로 조사된 기준 온도에서 상하한에 여유범위를 고려하여 정하였다.</description>
+    </item>
+    
+    <item>
+      <title>후지쯔와 큐슈대학, 농업생산을 위한 AI 공동연구</title>
+      <link>/post/new_fujitsu_ai/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/new_fujitsu_ai/</guid>
+      <description>Thumbnail 이미지 출처
+기사 원문
+2018년 4월 12일 규슈대학과 후지쯔(Fujitsu Limited)는 2018 년 4월부터 2년간 인공지능으로 농산물의 안정성과 정교함을 높이기 위해 농업분야 공동연구를 발표했다.
+이번 공동 연구에서 후지쯔와 규슈대학은 큐슈대학의 phytometric 기술을 사용하여 측정한 식물의 높이와 잎 표면적을 포함한 식물 성장 상태 데이터와의 시공간 변화 데이터를 통합한 독점적인 식물성장 모델을 취할 예정이다. 식물 이론을 개발하고 후지쯔가 개발한 AI 엔진과 통합하여 성장률 및 수확기간 등의 정보를 실시간으로 예측할 수 있다. 두 기관은 또한 이러한 예측을 토대로 현장에서 식물 성장을 규제함으로써 효율적인 식물 재배를 수요에 맞게 할 수 있는 시스템에 대한 연구 개발을 수행한다.</description>
+    </item>
+    
+    <item>
+      <title>스마트팜 데이터의 이해 (2/2)</title>
+      <link>/post/smartfarm_data2/</link>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/smartfarm_data2/</guid>
+      <description>PREV : 스마트팜(ICT 기반 원예온실) 데이터의 이해 (1/3)스마트팜 데이터 요약 : 분단위 측정치와 시간단위 평균치지난 Post에서 분단위 데이터 dat을 시간단위 데이터로 요약하여 새로운 데이터 dat_hour를 만들었을 때의 저장용량과 다운로드 속도 측면에서의 이점을 설명하였다. 이점이 있다면 그에 반하는 역효과도 분명 발생하게 되는데 1/60배로 데이터를 축약했다면 그만큼의 정보손실이 발생한다.
+온실 내부평균온도에 대한 분단위 데이터와 시간단위 데이터의 그래프를 비교해보면 그 영향을 눈으로 확인할 수 있다. X축은 0시~24시까지의 시간, Y축은 내부평균온도(EVTP)로 설정하였다.</description>
+    </item>
+    
+    <item>
+      <title>스마트팜 데이터의 이해 (1/3)</title>
+      <link>/post/smartfarm_data/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/smartfarm_data/</guid>
+      <description>Thumbnail 이미지 출처
+스마트팜이란?농림수산식품교육문화정보원(EPIS, 이하 농정원)이 운영하는 SmartFarm Korea 에서 정의하는 스마트팜의 개념을 보면 스마트 온실, 스마트 과수원, 스마트 축사를 통틀어 스마트팜이라고 지칭하고 있다. 과거에 프리바 유리온실 모델과 같은 ICT 기반의 원예온실로 불리던 개념이 축산과 과수 농장까지 확대되면서 스마트팜이 개념으로 발전하였다.
+스마트팜의 구성요소는 크게 현장의 환경정보와 영상정보를 수집하는 수집부, 수집된 데이터를 저장하고 필요한 형태로 가공/분석하는 저장부, 가공/분석된 정보를 이용하여 온실 관리에 필요한 정보를 표출하고 장비를 제어하는 활용부로 나눌 수 있다.</description>
+    </item>
+    
+  </channel>
+</rss>
