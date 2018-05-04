@@ -1,0 +1,14 @@
+---
+title: 농업 및 데이터과학 관련 논문 리뷰
+author: []
+date: '2018-04-13'
+slug: paper_review
+categories:
+  - 논문리뷰
+tags: []
+
+---
+
+#### 농업과 데이터 과학 관련 논문을 리뷰해보아요
+
+

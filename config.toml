@@ -1,0 +1,68 @@
+baseurl = "/"
+title = "AgData Lab"
+languageCode = "en-us"
+paginate = "10" # Number of posts per page
+theme = "mainroad"
+disqusShortname = "" # Enable comments by entering your Disqus shortname
+googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+
+[Author]
+    name = "AgData Lab"
+    bio = "Agdata Lab은 서울대학교 농업정보시스템 연구실에서 운영하는 농업 빅데이터 연구 블로그이다."
+    avatar = "img/agdatalab.jpg"
+
+[Params]
+    subtitle = "서울대학교 농업정보시스템 연구실" # Subtitle of your site
+    description = "Connect Everything in Agriculture" # Description of your site
+    opengraph = true
+    readmore = false # Show "Read more" button in list if true
+    leftsidebar = false # Move sidebar to the left side if true
+    authorbox = true
+    post_navigation = true
+    postSections = ["post"]
+
+    [Params.authors]
+      [Params.authors.unknown]
+        name = "미상"
+        bio = "정체불명의 인물이다"
+        avatar = "img/avatar.png"
+      [Params.authors.jangbak]
+        name = "장박"
+        bio = "장박은 농업정보시스템 연구실에서 오랜시간 숙성되고 있는 농업데이터사이언티스트이다."
+        avatar = "img/jangbak.jpg"
+
+[Params.widgets]
+    search = true # Enable "Search" widget
+    recent_articles = true # Enable "Recent arcticles" widget
+    categories = true # Enable "Categories" widget
+    tags = true # Enable "Tags" widget
+        tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)
+
+
+[menu]
+
+
+[[menu.main]]  
+    name = "About"
+    url = "/about"
+    weight = 1
+    
+[[menu.main]]  
+    name = "Categories"
+    url = "/topic_categories"
+    weight = 2
+    
+[[menu.main]]  
+    name = "Paper Review"
+    url = "/paper_review"
+    weight = 3
+    
+[[menu.main]]  
+    name = "News Scrap"
+    url = "/news_scrap"
+    weight = 4
+    
+[[menu.main]]  
+    name = "Lab activity"
+    url = "/lab_activity"
+    weight = 5    

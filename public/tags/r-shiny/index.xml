@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Shiny on AgData Lab</title>
+    <link>/tags/r-shiny/</link>
+    <description>Recent content in R Shiny on AgData Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/r-shiny/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>도매시장 가격분석 프로토타입 Shiny App</title>
+      <link>/post/wholesale_market_prototype_shiny_app/</link>
+      <pubDate>Sat, 05 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/wholesale_market_prototype_shiny_app/</guid>
+      <description>Shinydashboard 패키지를 이용해서 만든 프로토타입 App이다. 인터렉티브한 그래프 효과를 위해 Plotly 패키지를 적용하였다. Shiny App이 호스팅 된 곳이 shinyapp 무료 계정이라 속도가 느린 편이다. 보다 빠른 속도를 원한다면 AgData Lab 서버로 접속할 수 있다.
+</description>
+    </item>
+    
+  </channel>
+</rss>

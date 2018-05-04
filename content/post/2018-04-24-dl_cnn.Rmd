@@ -1,0 +1,13 @@
+---
+title: Deep Learning & Convolutional Neural Network
+author: jangbak
+date: '2018-04-24'
+slug: dl_cnn
+categories:
+  - 랩세미나
+tags:
+  - Deep Learning
+  - Convolutional Neural Network
+---
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/vW2OdPrpQ2CvSI" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/agdatalab/deep-learning-convolutional-neural-network" title="Deep Learning &amp; Convolutional Neural Network" target="_blank">Deep Learning &amp; Convolutional Neural Network</a> </strong> from <strong><a href="https://www.slideshare.net/agdatalab" target="_blank">agdatalab</a></strong> </div>

@@ -1,0 +1,77 @@
+baseurl = "/"
+title = "Agdata Lab"
+languageCode = "en-us"
+paginate = "10" # Number of posts per page
+theme = "mainroad"
+disqusShortname = "" # Enable comments by entering your Disqus shortname
+googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+
+[Author]
+    name = "장박"
+    bio = "장박은 농업정보시스템 연구실의 최장수 대학원생이다."
+    avatar = "img/jangbak.jpg"
+
+
+[Params]
+    subtitle = "서울대학교 농업정보시스템 연구실" # Subtitle of your site
+    description = "Connect Everything in Agriculture" # Description of your site
+    opengraph = true
+    readmore = false # Show "Read more" button in list if true
+    leftsidebar = false # Move sidebar to the left side if true
+    authorbox = true
+    post_navigation = true
+    postSections = ["post"]
+    defaultAuthor = "장박"
+    [Params.authors]
+      [Params.authors.unknown]
+        name = "미상"
+        bio = "정체불명의 인물이다"
+        avatar = "img/avtar.png"
+
+[Params.widgets]
+    search = true # Enable "Search" widget
+    recent_articles = true # Enable "Recent arcticles" widget
+    categories = true # Enable "Categories" widget
+    tags = true # Enable "Tags" widget
+        tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)
+
+
+[menu]
+
+
+[[menu.main]]  
+    name = "About"
+    url = "/about"
+    weight = 1
+    
+[[menu.main]]  
+    name = "농업통계"
+    url = "/agri_stat"
+    weight = 2
+    
+[[menu.main]]  
+    name = "생산과 유통"
+    url = "/prod_supply"
+    weight = 3
+    
+[[menu.main]]  
+    name = "환경모니터링과 제어"
+    url = "/monitor_control"
+    weight = 4
+    
+[[menu.main]]  
+    name = "과학과 기술"
+    url = "/science_tech"
+    weight = 5
+    
+[[menu.main]]  
+    name = "논문 리뷰"
+    url = "/paper_review"
+    weight = 6
+    
+[[menu.main]]  
+    name = "뉴스 스크랩"
+    url = "/news_scrap"
+    weight = 7
+    
+    

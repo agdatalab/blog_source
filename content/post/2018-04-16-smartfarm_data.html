@@ -1,0 +1,67 @@
+---
+title: 스마트팜 데이터의 이해 (1/3)
+author: jangbak
+date: '2018-04-16'
+categories:
+  - 환경모니터링과 제어
+tags:
+  - 스마트팜
+  - 빅데이터
+  - 환경 모니터링
+slug: smartfarm_data
+thumbnail: img/smart_farm.jpg
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
+<script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
+
+
+<p><a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=sec&amp;sid1=001&amp;oid=002&amp;aid=0002018644">Thumbnail 이미지 출처</a></p>
+<hr />
+<div class="section level4">
+<h4>스마트팜이란?</h4>
+<p>농림수산식품교육문화정보원(EPIS, 이하 농정원)이 운영하는 <a href="http://www.smartfarmkorea.net">SmartFarm Korea</a> 에서 정의하는 <a href="http://www.smartfarmkorea.net/contents/view.do?menuId=M01010102">스마트팜의 개념</a>을 보면 스마트 온실, 스마트 과수원, 스마트 축사를 통틀어 스마트팜이라고 지칭하고 있다. 과거에 프리바 유리온실 모델과 같은 ICT 기반의 원예온실로 불리던 개념이 축산과 과수 농장까지 확대되면서 스마트팜이 개념으로 발전하였다.</p>
+<p>스마트팜의 구성요소는 크게 현장의 환경정보와 영상정보를 수집하는 수집부, 수집된 데이터를 저장하고 필요한 형태로 가공/분석하는 저장부, 가공/분석된 정보를 이용하여 온실 관리에 필요한 정보를 표출하고 장비를 제어하는 활용부로 나눌 수 있다.</p>
+<ul>
+<li>데이터 수집부 : 센서(환경정보), CCTV(영상), Node장비(데이터 일괄수집/전송)</li>
+<li>데이터 저장부 : 클라우드 또는 기업 서버(수집데이터 저장 + 활용서비스로 데이터 송출)</li>
+<li>데이터 활용부 : Node장비(개별 제어기로 데이터 전송), 제어기(창/Fan/CO2시비기 관수기,양액기,급이기), 어플리케이션(모니터링 및 분석 서비스)</li>
+</ul>
+<p>각각의 구성요소이 어떻게 연계되어 동작하는지를 한마디로 요약해보면 <em>“수집부에서 관찰된 외부환경의 상황을 저장부에서 최적 생육을 위한 조건에 부합하는지 판단하고 최적 조건이 될 수 있도록 하는 제어 신호를 다시 활용부의 제어기 Node장비로 전송하여 개별 제어기들이 최적 조건을 유지하도록 동작시키는 것”</em> 이다.</p>
+<p>스마트팜 도입으로 인한 효과는 1) <strong>생산성 및 품질 향상</strong>, 2) <strong>위험상황 조기발견으로 피해 최소화</strong>, 3) <strong>모니터링을 위한 시간 절약으로 노동력 절감</strong> 을 기대할 수 있으나 스마트팜 설비를 갖추기 위한 투자비용을 회수하는데 필요한 시간은 운영을 어떻게 하는지에 따라 큰 차이가 날 수 있다.</p>
+<p>정부에서 스마트팜의 개념을 정립하고 관련 정책을 도입된 것은 2014년으로 도입 첫해의 스마트팜 면적은 100ha 수준이었으나 2016년 말에는 19배 증가한 1912ha로 보고되어 매년 성장하고 있으나 <a href="http://www.nongup.net/news/articleView.html?idxno=8185">(출처)</a>, 아직까지는 정부 주도 정책 사업이 스마트팜 확산을 견인하는 단계로 자발적인 확산으로 이어지기 위해서는 보다 섬세한 정책 설계가 필요할 것으로 판단된다.</p>
+<hr />
+</div>
+<div id="---" class="section level4">
+<h4>스마트 온실 데이터를 살펴보자</h4>
+<p>사용 데이터는 2014~2016년 3년간 진행된 농촌진흥청 <code>&quot;시설농업 ICT융합 운영활성화 모델 개발&quot;</code> 연구과제에서 수집된 스마트 온실의 환경 데이터로 해당 데이터는 농정원에서 운영하는 SmartFarm Korea에서 <a href="http://www.smartfarmkorea.net/front/open/list.do?menuId=M01060201">오픈API</a> 신청 후 사용이 가능하다.</p>
+<p>이번 Post에서 사용하는 샘플 데이터는 수집 농가 중 파프리카 농가 1개소의 2015년 1년치의 데이터로 <a href="https://github.com/agdatalab/sample_data">Agdata Lab 저장소</a>에서 다운로드할 수 있다. 측정 주기는 1분 단위이고 14개의 환경요소를 측정하여 기록한 데이터이다.</p>
+<p>먼저 csv파일을 읽어서 측정치 개수를 확인해보자. nrow()로 확인해본 결과 525,081개이다. 1년간 1분단위로 정확히 측정되었다면 <code>60분 x 24시간 x 365일 = 525,600개</code>의 측정치가 있어야 하는데 519개의 결측치가 있다. 이는 측정치가 기록된 시간이 예를들어 59분00초에 1개, 59분59초에 1개가 기록될 경우 하나의 측정치만 저장하기 때문에 발생한 결측치이다.</p>
+<pre class="r"><code>dat &lt;- read.csv(&#39;env_min_spl.csv&#39;)
+print(paste(&#39;number of observation :&#39;,nrow(dat)))</code></pre>
+<pre><code>## [1] &quot;number of observation : 525081&quot;</code></pre>
+<p>다음으로 측정된 변수를 확인해보자. 1~6번째 변수는 측정 시간과 관련된 변수들이고 7번째 변수부터 환경 요인을 의미하는 변수들이다.</p>
+<pre class="r"><code>names(dat)</code></pre>
+<pre><code>##  [1] &quot;date&quot;    &quot;year&quot;    &quot;month&quot;   &quot;day&quot;     &quot;hour&quot;    &quot;minute&quot;  &quot;OTP&quot;    
+##  [8] &quot;LTP&quot;     &quot;RTP&quot;     &quot;EVTP&quot;    &quot;LHM&quot;     &quot;RHM&quot;     &quot;EVHM&quot;    &quot;RAN&quot;    
+## [15] &quot;CO2&quot;     &quot;INS&quot;     &quot;ACC_INS&quot; &quot;WD&quot;      &quot;WDS&quot;     &quot;LDTP&quot;</code></pre>
+<p>각각의 의미는 다음과 같다.</p>
+<pre><code>OTP(외부온도),  LTP(좌측내부온도),  RTP(우측내부온도),  EVTP(평균내부온도),   LHM(좌측내부습도),  RHM(우측내부습도),  EVHM(평균내부습도),   RAN(감우:강우유무),   CO2(내부CO2농도),   INS(일사량),  ACC_INS(누적일사량),  WD(풍향),   WDS(풍속),  LDTP(지면온도) </code></pre>
+<p>엑셀이나 Rstudio로 dat 파일을 열어보면 다음과 같은 측정치가 기록된 데이터임을 확인할 수 있을 것이다.</p>
+<div id="htmlwidget-1" style="width:100%;height:350px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/2018-04-16-smartfarm_data_files/figure-html//widgets/widget_show table.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<p>이제 스마트 온실에서 측정된 환경 데이터가 어떤 형태인지는 파악되었을 것이다. 다음으로 분단위로 측정된 데이터를 60분간의 평균으로 시간단위 데이터로 변환해보자.</p>
+<pre class="r"><code>dat_hour &lt;- dat[,c(1,5,7:19)] %&gt;% group_by(date,hour) %&gt;% summarise_all(funs(round(mean(.,na.rm=T),2)))
+nrow(dat_hour)</code></pre>
+<pre><code>## [1] 8760</code></pre>
+<p>dat_hour 데이터 행의 개수는 8,760개로 dat의 525,800개 대비 확연히 줄었다 분단위 측정치를 시간단위로의 변환이 필요한 이유는 데이터의 크기 때문이다. 분단위 측정 데이터는 1개 농가의 1년치 데이터의 크기가 약 40MB이다. 1000개 농가 데이터를 5년간 수집하고 있다면 데이터 크기는 200GB이다. 하드디스크의 가격이 싸기 때문에 저장공간의 문제는 크지 않으나 Cloud DB에 저장된 데이터를 분석하기 위해 인터넷망으로 불러와야 하는 상황이라면 200GB를 다운로드하기 위해서는 많은 시간이 소요될 것이다. 200GB 분단위 데이터를 시간단위 데이터로 변환하면 <code>200 / 60 = 3.3GB</code> 60배 더 빠른 속도로 데이터를 받을 수 있다.</p>
+<p>시간단위로 요약된 dat_hour는 다음과 같이 매 시간별로 분단위 60개의 측정치의 평균값으로 표현된다.</p>
+<div id="htmlwidget-2" style="width:100%;height:350px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"url":"/post/2018-04-16-smartfarm_data_files/figure-html//widgets/widget_show table2.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<hr />
+<center>
+<a href="/post/smartfarm_data2">NEXT : 스마트팜(ICT 기반 원예온실) 데이터의 이해 (2/3)</a>
+</center>
+<hr />
+</div>

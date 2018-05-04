@@ -1,0 +1,14 @@
+---
+title: 도매시장 가격분석 프로토타입 Shiny App
+author: jangbak
+date: '2018-05-05'
+slug: wholesale_market_prototype_shiny_app
+categories:
+  - 과학과 기술
+tags:
+  - R shiny
+---
+
+Shinydashboard 패키지를 이용해서 만든 프로토타입 App이다. 인터렉티브한 그래프 효과를 위해  Plotly 패키지를 적용하였다. Shiny App이 호스팅 된 곳이 [shinyapp](https://www.shinyapps.io/) 무료 계정이라 속도가 느린 편이다. 보다 빠른 속도를 원한다면 [AgData Lab 서버](http://147.46.228.238:3838/wsmkt_price)로 접속할 수 있다.
+
+<iframe width="800" height="1200" scrolling="yes" frameborder="no"  src=" https://agdata-lab.shinyapps.io/wsmkt_trend/"> </iframe>

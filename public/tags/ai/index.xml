@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ai on AgData Lab</title>
+    <link>/tags/ai/</link>
+    <description>Recent content in Ai on AgData Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>후지쯔와 큐슈대학, 농업생산을 위한 AI 공동연구 (스크랩)</title>
+      <link>/post/new_fujitsu_ai/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/new_fujitsu_ai/</guid>
+      <description>기사 원문
+2018년 4월 12일 규슈대학과 후지쯔(Fujitsu Limited)는 2018 년 4월부터 2년간 인공지능으로 농산물의 안정성과 정교함을 높이기 위해 농업분야 공동연구를 발표했다.
+이번 공동 연구에서 후지쯔와 규슈대학은 큐슈대학의 phytometric 기술을 사용하여 측정한 식물의 높이와 잎 표면적을 포함한 식물 성장 상태 데이터와의 시공간 변화 데이터를 통합한 독점적인 식물성장 모델을 취할 예정이다. 식물 이론을 개발하고 후지쯔가 개발한 AI 엔진과 통합하여 성장률 및 수확기간 등의 정보를 실시간으로 예측할 수 있다. 두 기관은 또한 이러한 예측을 토대로 현장에서 식물 성장을 규제함으로써 효율적인 식물 재배를 수요에 맞게 할 수 있는 시스템에 대한 연구 개발을 수행한다.</description>
+    </item>
+    
+  </channel>
+</rss>

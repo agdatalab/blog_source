@@ -1,0 +1,57 @@
+---
+title: '연구실 학술 활동'
+author: ''
+date: '2018-04-24'
+slug: lab_activity
+categories: []
+tags: []
+---
+
+우측 랩세미나/랩스터디/기타발표자료 카테고리를 선택하면 최신 순으로 각각의 활동별 학술활동 자료를 확인할 수 있습니다. 
+
+---
+
+### 랩 세미나 발표 자료 모음 
+
+###### 2018.03.23 랩세미나 
+
+* Deep learning & Convolutional Neural Network [Post](/post/dl_cnn/)
+
+---
+
+### 랩 스터디 발표 자료 모음 
+
+###### 2018.03.21 랩스터디
+
+* A comparison of convenience food consumption among different income levels in South Korea [Post](/post/)
+
+###### 2018.03.28 랩스터디
+
+* 양돈농가의 경영정보시스템 수용과 관련변인 [Post](/post/)
+
+###### 2018.04.04 랩스터디
+
+* Analysis of Multi-Climate Controller in Tomato Greenhouses [Post](/post/)
+
+###### 2018.04.11 랩스터디
+
+* 주성분회귀분석을 이용한 한국프로야구 순위 [Post](/post/)
+
+###### 2018.04.25 랩스터디
+
+* GLM을 이용한 대학학업 성취도 분석 [Post](/post/glm_ach)
+
+###### 2018.05.04 랩스터디
+
+* 원산지정보의 강조와 소비자의 자민족주의 성향이 국제광고 효과에 미치는 영향 [Post](/post/orgin_intnl_ad)
+
+---
+
+### 기타 발표자료 
+
+###### 2014.05.19 농식품정보과학회 심포지움 
+
+* 농식품 분야 ICT 융합 해외 최신 기술 동향 [Post](/post/ict_convergence_tech_ppt)
+
+---
+
